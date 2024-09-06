@@ -16,8 +16,10 @@ it("Should show new thought to be present", async () => {
   render(<App />);
 
   // The code below mimics a user posting a thought with text 'Oreos are delicious'
-  const addThoughtInput = screen.getByRole("input");
-  const addButton = screen.getByRole("submit");
+  const addThoughtInput = screen.getByRole("textbox", {
+    name: "What's on your mind?",
+  });
+  const addButton = screen.getByRole("button", { name: "Add" });
   userEvent.type(addThoughtInput, "Oreos are delicious");
   userEvent.click(addButton);
 

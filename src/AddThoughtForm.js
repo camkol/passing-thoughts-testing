@@ -25,13 +25,12 @@ export function AddThoughtForm(props) {
     <form onSubmit={handleSubmit} className="AddThoughtForm">
       <input
         type="text"
-        role="input"
         aria-label="What's on your mind?"
         placeholder="What's on your mind?"
         value={text}
         onChange={handleTextChange}
       />
-      <input type="submit" role="submit" value="Add" />
+      <input type="submit" value="Add" />
     </form>
   );
 }
